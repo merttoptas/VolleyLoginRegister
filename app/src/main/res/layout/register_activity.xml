@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.RegisterActivity">
+
+        <EditText
+            android:id="@+id/etRegisterNameSurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="Name Surname"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etRegisterEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/etRegisterNameSurname"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="37dp"
+            android:ems="10"
+            android:hint="E-Mail"
+            android:inputType="textEmailAddress"
+            app:layout_constraintStart_toStartOf="@+id/etRegisterNameSurname"
+            app:layout_constraintTop_toTopOf="@+id/etRegisterNameSurname" />
+
+        <EditText
+            android:id="@+id/etCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etRegisterEmail"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Country"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/etRegisterEmail"
+            app:layout_constraintTop_toBottomOf="@+id/etRegisterEmail" />
+
+        <EditText
+            android:id="@+id/edtCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etCountry"
+            android:layout_alignStart="@+id/etRegisterEmail"
+            android:ems="10"
+            android:hint="City"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/etCountry"
+            app:layout_constraintTop_toBottomOf="@+id/etCountry" />
+
+        <EditText
+            android:id="@+id/edtRPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/etRegisterEmail"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="7dp"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="@+id/edtCity"
+            app:layout_constraintTop_toBottomOf="@+id/edtCity" />
+
+        <Button
+            android:id="@+id/btn_Register"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            app:layout_constraintStart_toStartOf="@+id/edtRPassword"
+            app:layout_constraintTop_toBottomOf="@+id/edtRPassword" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
