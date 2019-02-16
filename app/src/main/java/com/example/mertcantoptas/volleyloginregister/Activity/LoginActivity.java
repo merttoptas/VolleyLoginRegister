@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
        StringRequest request = new StringRequest(
 
                Request.Method.POST,
-               "http:/10.1.29.160:8888/volley/login.php",
+               "http:/192.168.1.54:8888/volley/login.php",
                new Response.Listener<String>() {
                    @Override
                    public void onResponse(String response) {

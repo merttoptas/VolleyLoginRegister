@@ -45,7 +45,7 @@ public class LoggedActivity extends AppCompatActivity {
         StringRequest istek = new StringRequest(
 
                 Request.Method.POST,
-                "http:/10.109.206.22:8888/volley/icerik_ekle.php",
+                "192.168.1.54:8888/volley/icerik_ekle.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -55,6 +55,8 @@ public class LoggedActivity extends AppCompatActivity {
                     gönderilen sayfadan gelen yanıtı yakalamadır.
 
                      */
+
+                        Log.d("OnRESPONSE",response);
                     }
                 },
                 new Response.ErrorListener() {
@@ -130,7 +132,7 @@ public class LoggedActivity extends AppCompatActivity {
     public void paylasimlariListele(){
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
-                "http:/10.109.206.22:8888/volley/paylasim_listele.php",
+                "http:/192.168.1.54:8888/volley/paylasim_listele.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -209,4 +211,5 @@ public class LoggedActivity extends AppCompatActivity {
 
 
     }
+
 }
